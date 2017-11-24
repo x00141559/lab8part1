@@ -1,0 +1,3 @@
+[0m[[0m[31merror[0m] [0m[0m[Error] /media/sf_student/java8lab1/app/views/main.scala.html:57[0m
+[0m[[0m[31merror[0m] [0m[0m    </table>: Expected '}' but found 'EOF'[0m
+[0m[[0m[31merror[0m] [0m[0m(compile:[31mtwirlCompileTemplates[0m) Twirl compilation failed[0m
