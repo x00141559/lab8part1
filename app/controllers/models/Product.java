@@ -1,7 +1,10 @@
 package models;
+
+
+
 import java.util.*;
 import javax.persistence.*;
-import io.bean.*;
+import io.ebean.*;
 import play.data.format.*;
 import play.data.validation.*;
 @Entity
@@ -13,12 +16,16 @@ public class Product extends Model {
 
 private Long id;
 
+@Constraints.Required
 private String name;
 
+@Constraints.Required
 private String description;
 
+@Constraints.Required
 private int stock;
 
+@Constraints.Required
 private double price;
 
 // Default Constructor

@@ -96,8 +96,8 @@ Seq[Any](_display_(/*2.3*/main("Products Page")/*2.24*/ {_display_(Seq[Any](form
 
               /*
                   -- GENERATED --
-                  DATE: Fri Nov 24 15:50:21 GMT 2017
-                  SOURCE: /media/sf_student/java8lab1/app/views/index.scala.html
+                  DATE: Fri Dec 01 16:21:53 GMT 2017
+                  SOURCE: /home/wdd/lab8part1/app/views/index.scala.html
                   HASH: da1285257f86f6740a69d9a0cbf6bc077070a720
                   MATRIX: 1030->3|1059->24|1098->26|1130->32
                   LINES: 33->2|33->2|33->2|35->4
