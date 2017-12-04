@@ -1,4 +1,5 @@
 
+ @(products: List[models.Product])
  @main("Products Page") {
   
   <p class="lead">Product Catalogue</p>
@@ -28,8 +29,16 @@
   </thead>
   
   <tbody>
+  @* Loop for creating table rows from product data*@
+  @for(p<-products) {
+    <tr>@p.getId</td>
+      <td>@p.getName</td>
+      <td>@p.getDescription</td>
+      <td>@p.getStock</td>
+      <td>&euro; @("%.2f".format(p.getPrice))</td>
+    </tr>
+  } @* End of the loop *@
   
-  <!-- Product row(s) -->
   
   <tr>
   

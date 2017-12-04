@@ -48,7 +48,14 @@ this.stock = stock;
 
 this.price = price;}
 
+//Generic query helper for entity Product with id of type Long
+public static final Finder<Long, Product> find = new Finder<>(Product.class);
 
+//Return an array list of all product objects
+
+public static final List<Product> findAll() {
+    return Product.find.all();
+}
 
 // Accessor methods
 

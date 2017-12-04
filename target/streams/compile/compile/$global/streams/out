@@ -1,8 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/lab8part1/app/controllers/HomeController.java:25:1: cannot find symbol[0m
-[0m[[0m[31merror[0m] [0m[0m  symbol:   method findAll()[0m
-[0m[[0m[31merror[0m] [0m[0m  location: class models.Product[0m
-[0m[[0m[31merror[0m] [0m[0m        List<Product> productList = Product.findAll();[0m
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/lab8part1/app/controllers/HomeController.java:26:1: method render in class views.html.index cannot be applied to given types;[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/lab8part1/app/controllers/HomeController.java:21:1: method render in class views.html.index cannot be applied to given types;[0m
 [0m[[0m[31merror[0m] [0m[0m  required: no arguments[0m
 [0m[[0m[31merror[0m] [0m[0m  found: java.util.List<models.Product>[0m
 [0m[[0m[31merror[0m] [0m[0m  reason: actual and formal argument lists differ in length[0m
