@@ -45,3 +45,9 @@ run
 code .
 exit
 run
+exit
+run
+exit
+run
+git add .
+exit

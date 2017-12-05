@@ -18,7 +18,13 @@ public class HomeController extends Controller {
    
     public Result index() {
         List<Product> productList = Product.findAll();
-        return ok(index.render());
+        return ok(index.render(productList));
+    }
+
+ 
+    public Result Customer() {
+        List<Customer> customerList = Customer.findAll();
+        return ok(index.render(customerList));
     }
 
 }

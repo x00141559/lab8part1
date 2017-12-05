@@ -1,0 +1,15 @@
+tbody{
+    padding-left: 15em;
+    padding-bottom: 15em;
+    padding-top: 15em;
+    padding-right: 15em;
+}
+table{
+    padding-left: 15em;
+    padding-bottom: 15em;
+    padding-top: 15em;
+    padding-right: 15em;
+}
+#numeric {
+ position:  right-align;
+}
