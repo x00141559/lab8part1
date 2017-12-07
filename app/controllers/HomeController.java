@@ -22,9 +22,9 @@ public class HomeController extends Controller {
     }
 
  
-    public Result Customer() {
+    public Result customer() {
         List<Customer> customerList = Customer.findAll();
-        return ok(index.render(customerList));
+        return ok(customer.render(customerList));
     }
 
 }

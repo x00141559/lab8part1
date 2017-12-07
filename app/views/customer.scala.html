@@ -1,0 +1,47 @@
+
+ @(customer: List[models.Customer])
+ @main("Customer Page") {
+  
+  <p class="lead">customer Catalogue</p>
+  
+  <table class="table table-bordered table-hover table-condensed">
+  
+  <thead>
+  
+  <!-- The header row-->
+  
+  <tr>
+  
+  <th>ID</th>
+  
+  <th>cName</th>
+  
+  <th>number</th>
+  
+  <th>age</th>
+  
+  <th>address</th>
+  
+  
+  
+  </tr>
+  
+  </thead>
+  
+  <tbody>
+  @* Loop for creating table rows from customer data*@
+  @for(c<-customer) {
+    <tr>@c.getId</td>
+      <td>@c.getcName</td>
+      <td>@c.getNumber</td>
+      <td>@c.getAge</td>
+      <td>@c.getAddress</td>
+    </tr>
+  } @* End of the loop *@
+  
+  
+  
+  
+  </tbody>
+  
+  </table>}

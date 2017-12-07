@@ -71,6 +71,17 @@ Seq[Any](format.raw/*1.32*/("""
 <li><a href="#">Contact</a></li>
 
 </ul>
+<ul class="nav navbar-nav">
+    
+    <li class="active"><a href="customer">Customer</a></li>
+       
+    <li><a href="/">Product</a></li>
+    
+    <li><a href="">Services</a></li>
+    
+    <li><a href="#">About</a></li>
+    
+    </ul>
 
 </div>
 
@@ -82,9 +93,9 @@ Seq[Any](format.raw/*1.32*/("""
 
 <div class="col-md-12">
 
-"""),_display_(/*53.2*/content),format.raw/*53.9*/("""
+"""),_display_(/*64.2*/content),format.raw/*64.9*/("""
 
-"""),format.raw/*55.1*/("""</div>
+"""),format.raw/*66.1*/("""</div>
 
 </row>
 
@@ -122,11 +133,11 @@ Copyright <strong>Online Shop</strong>
 
               /*
                   -- GENERATED --
-                  DATE: Tue Dec 05 17:26:55 GMT 2017
+                  DATE: Thu Dec 07 13:50:43 GMT 2017
                   SOURCE: /media/sf_student/lab8part1/app/views/main.scala.html
-                  HASH: cdaac9ae9b4df269409883e3573ebabfb6d3df00
-                  MATRIX: 952->1|1077->31|1105->33|1221->122|1247->127|1446->299|1461->305|1523->346|1958->755|1985->762|2014->764
-                  LINES: 28->1|33->1|35->3|43->11|43->11|49->17|49->17|49->17|85->53|85->53|87->55
+                  HASH: 7ac298644b64f2e9f84d836653158ab7e97873da
+                  MATRIX: 952->1|1077->31|1105->33|1221->122|1247->127|1446->299|1461->305|1523->346|2193->990|2220->997|2249->999
+                  LINES: 28->1|33->1|35->3|43->11|43->11|49->17|49->17|49->17|96->64|96->64|98->66
                   -- GENERATED --
               */
           

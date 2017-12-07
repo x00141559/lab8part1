@@ -51,3 +51,16 @@ exit
 run
 git add .
 exit
+run
+exit
+run
+exit
+run
+sbt
+exit
+run
+sbt
+exit
+run
+RUN
+run
