@@ -1,5 +1,16 @@
+# --- Created by Ebean DDL
+# To stop Ebean DDL generation, remove this comment and start using Evolutions
 
 # --- !Ups
+
+create table customer (
+  id                            bigint auto_increment not null,
+  c_name                        varchar(255),
+  number                        varchar(255),
+  age                           integer not null,
+  address                       varchar(255),
+  constraint pk_customer primary key (id)
+);
 
 create table product (
   id                            bigint auto_increment not null,
@@ -13,6 +24,7 @@ create table product (
 
 # --- !Downs
 
-drop table if exists product;
+drop table if exists customer;
 
+drop table if exists product;
 

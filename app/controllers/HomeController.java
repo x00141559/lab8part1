@@ -22,6 +22,7 @@ public class HomeController extends Controller {
     }
 
  
+
     public Result customer() {
         List<Customer> customerList = Customer.findAll();
         return ok(customer.render(customerList));

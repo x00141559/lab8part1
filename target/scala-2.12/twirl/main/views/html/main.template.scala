@@ -63,26 +63,26 @@ Seq[Any](format.raw/*1.32*/("""
 </div>
 
 <ul class="nav navbar-nav">
-
-<li class="active"><a href="#">About</a></li>
-
-<li><a href="#">Services</a></li>
-
-<li><a href="#">Contact</a></li>
-
-</ul>
-<ul class="nav navbar-nav">
-    
+<!--     
     <li class="active"><a href="customer">Customer</a></li>
        
     <li><a href="/">Product</a></li>
     
     <li><a href="">Services</a></li>
     
-    <li><a href="#">About</a></li>
+    <li><a href="#">About</a></li> -->
     
     </ul>
+    <li class="active"><a href="/">Product</a></li>
+    <li><a href="customer">Customer</a></li>
 
+    <li><a href="">Services</a></li>
+    
+    <li><a href="#">About</a></li>
+
+</ul>
+    </div>
+    </div>
 </div>
 
 </nav>
@@ -133,10 +133,10 @@ Copyright <strong>Online Shop</strong>
 
               /*
                   -- GENERATED --
-                  DATE: Thu Dec 07 13:50:43 GMT 2017
+                  DATE: Fri Dec 08 13:41:57 GMT 2017
                   SOURCE: /media/sf_student/lab8part1/app/views/main.scala.html
-                  HASH: 7ac298644b64f2e9f84d836653158ab7e97873da
-                  MATRIX: 952->1|1077->31|1105->33|1221->122|1247->127|1446->299|1461->305|1523->346|2193->990|2220->997|2249->999
+                  HASH: ef585cf53ec5d2821c4d67a317593c840d3180c0
+                  MATRIX: 952->1|1077->31|1105->33|1221->122|1247->127|1446->299|1461->305|1523->346|2254->1051|2281->1058|2310->1060
                   LINES: 28->1|33->1|35->3|43->11|43->11|49->17|49->17|49->17|96->64|96->64|98->66
                   -- GENERATED --
               */
