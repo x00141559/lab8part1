@@ -31,11 +31,15 @@
   <tbody>
   @* Loop for creating table rows from customer data*@
   @for(c<-customer) {
-    <tr>@c.getId</td>
+    <td>@c.getId</td>
       <td>@c.getcName</td>
       <td>@c.getNumber</td>
       <td>@c.getAge</td>
       <td>@c.getAddress</td>
+      <td><a href ="@routes.HomeController.deleteCustomer(c.getId)" 
+        class="button-xs btn-danger" onclick="return confirmDel();">
+      <span class ="glyphicon glyphicon-trash"></span></a></td>
+        </tr>
     </tr>
   } @* End of the loop *@
   
@@ -44,4 +48,9 @@
   
   </tbody>
   
-  </table>}
+  </table>
+  
+  <p> <a href = "@routes.HomeController.addCustomer()">
+    <button class = "btn btn-primary">Add a Customer</button>
+  </a>
+  </p>}

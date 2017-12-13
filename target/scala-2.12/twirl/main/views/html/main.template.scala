@@ -115,10 +115,11 @@ Copyright <strong>Online Shop</strong>
 </row>
 
 </container>
-
+<script src="routes.Assets.versioned("javascripts/main.js")"></script>
 </body>
 
-</html>"""))
+</html>
+"""))
       }
     }
   }
@@ -134,9 +135,9 @@ Copyright <strong>Online Shop</strong>
 
               /*
                   -- GENERATED --
-                  DATE: Wed Dec 13 11:51:39 GMT 2017
-                  SOURCE: /home/wdd/webapps/lab8part1/app/views/main.scala.html
-                  HASH: 616a32b5f1aa42fb5e8c5e72d55c80ea87c27d4d
+                  DATE: Wed Dec 13 16:25:21 GMT 2017
+                  SOURCE: /home/wdd/webapps/play/lab8part1/app/views/main.scala.html
+                  HASH: 2d913b8b7217b65f40844d925a5ac1d12500cfcb
                   MATRIX: 952->1|1077->31|1105->33|1221->122|1247->127|1446->299|1461->305|1523->346|2264->1061|2291->1068|2320->1070
                   LINES: 28->1|33->1|35->3|43->11|43->11|49->17|49->17|49->17|97->65|97->65|99->67
                   -- GENERATED --

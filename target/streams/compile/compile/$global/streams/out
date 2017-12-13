@@ -1,4 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/lab8part1/app/views/index.scala.html:47:40: value addProduct is not a member of controllers.ReverseHomeController[0m
-[0m[[0m[31merror[0m] [0m[0m <p> <a href = "@routes.HomeController.addProduct()">[0m
-[0m[[0m[31merror[0m] [0m[0m                                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/play/lab8part1/app/views/index.scala.html:44:42: value deleteProduct is not a member of controllers.ReverseHomeController[0m
+[0m[[0m[31merror[0m] [0m[0m    <td><a href ="@routes.HomeController.deleteProduct(p.getId)" [0m
+[0m[[0m[31merror[0m] [0m[0m                                         ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m
