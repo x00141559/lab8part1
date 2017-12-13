@@ -135,7 +135,7 @@ Copyright <strong>Online Shop</strong>
 
               /*
                   -- GENERATED --
-                  DATE: Wed Dec 13 16:25:21 GMT 2017
+                  DATE: Wed Dec 13 16:52:50 GMT 2017
                   SOURCE: /home/wdd/webapps/play/lab8part1/app/views/main.scala.html
                   HASH: 2d913b8b7217b65f40844d925a5ac1d12500cfcb
                   MATRIX: 952->1|1077->31|1105->33|1221->122|1247->127|1446->299|1461->305|1523->346|2264->1061|2291->1068|2320->1070

@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/webapps/play/lab8part1/conf/routes
-// @DATE:Wed Dec 13 16:12:55 GMT 2017
+// @DATE:Wed Dec 13 17:03:27 GMT 2017
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -20,7 +20,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:11
+    // @LINE:13
     def addProductSubmit: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.addProductSubmit",
       """
@@ -30,17 +30,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:12
-    def addCustomer: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.addCustomer",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "addCustomer"})
-        }
-      """
-    )
-  
-    // @LINE:13
+    // @LINE:15
     def addCustomerSubmit: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.addCustomerSubmit",
       """
@@ -60,6 +50,16 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:10
+    def updateProduct: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.updateProduct",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "updateProduct/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0))})
+        }
+      """
+    )
+  
     // @LINE:8
     def deleteCustomer: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.deleteCustomer",
@@ -70,7 +70,17 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:10
+    // @LINE:11
+    def updateCustomer: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.updateCustomer",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "updateCustomer/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Long]].javascriptUnbind + """)("id", id0))})
+        }
+      """
+    )
+  
+    // @LINE:12
     def addProduct: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.addProduct",
       """
@@ -102,7 +112,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:15
+  // @LINE:17
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -110,7 +120,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:15
+    // @LINE:17
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """

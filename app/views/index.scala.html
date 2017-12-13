@@ -41,10 +41,18 @@
       <td>@p.getDescription</td>
       <td>@p.getStock</td>
     <numeric><td>&euro; @("%.2f".format(p.getPrice))</td></numeric>
+<!-- -edit -->
+    <td><a href ="@routes.HomeController.updateProduct(p.getId)"
+      class="button-xs btn-danger" >
+      <span class ="glyphicon glyphicon-pencil"></span></a></td> 
+
+
+<!-- -delete -->
+
     <td><a href ="@routes.HomeController.deleteProduct(p.getId)" 
     class="button-xs btn-danger" onclick="return confirmDel();">
-  <span class ="glyphicon glyphicon-trash"></span></a></td>
-    </tr>
+  <span class ="glyphicon glyphicon-trash"></span></a></td></tr>
+    
   } @* End of the loop *@
   
   

@@ -14,6 +14,45 @@ import views.html.*;
  * to the application's home page.
  */
 public class HomeController extends Controller {
+    @Transactional
+    public Result updateProduct(Long id){
+        Product p;
+        Form<Product> productForm;
+        try{
+            p = Product.find.byId(id);
+            productForm = formFactory.form(Product.class).fill(p);
+        } catch (Exception ex) {
+            return badRequest("error");
+        }
+
+        return ok(addProduct.render(productForm));
+        }
+
+
+
+
+
+
+
+
+
+        @Transactional
+        public Result updateCustomer(Long id){
+            Customer c;
+            Form<Customer> customerForm;
+            try{
+                c = Customer.find.byId(id);
+                customerForm = formFactory.form(Customer.class).fill(c);
+            } catch (Exception ex) {
+                return badRequest("error");
+            }
+    
+            return ok(addCustomer.render(customerForm));
+            }
+
+
+
+
 
     private FormFactory formFactory;
     @Inject
@@ -27,6 +66,9 @@ public class HomeController extends Controller {
 
  
 
+
+
+
     public Result customer() {
         List<Customer> customerList = Customer.findAll();
         return ok(customer.render(customerList));
@@ -36,36 +78,59 @@ public class HomeController extends Controller {
         return ok(addProduct.render(productForm));
     }
 
+
+
+
+
+
     public Result addProductSubmit(){
         Form<Product> newProductForm = formFactory.form(Product.class).bindFromRequest();
 
         if (newProductForm.hasErrors()) {
             return badRequest(addProduct.render(newProductForm));
         }else { Product newProduct = newProductForm.get();
-
-            newProduct.save();
+            if(newProduct.getId() == null){
+                newProduct.save();
+            }
+else if(newProduct.getId() != null){
+    newProduct.update();
+}
+           
             flash("success","Product "+ newProduct.getName() +" was added");
             return redirect(controllers.routes.HomeController.index());
 
         }
     }
 
-        public Result addCustomer(){
-            Form<Customer> customerForm = formFactory.form(Customer.class);
-            return ok(addCustomer.render(customerForm));
-        }
-        public Result addCustomerSubmit(){
-            Form<Customer> newCustomerForm = formFactory.form(Customer.class).bindFromRequest();
-    
-            if (newCustomerForm.hasErrors()) {
-                return badRequest(addCustomer.render(newCustomerForm));
-            }else { Customer newCustomer = newCustomerForm.get();
-    
+
+
+
+
+
+    public Result addCustomerSubmit(){
+        Form<Customer> newCustomerForm = formFactory.form(Customer.class).bindFromRequest();
+
+        if (newCustomerForm.hasErrors()) {
+            return badRequest(addCustomer.render(newCustomerForm));
+        }else { Customer newCustomer = newCustomerForm.get();
+            if(newCustomer.getId() == null){
                 newCustomer.save();
-                flash("success","Customer "+ newCustomer.getcName() +" was added");
-                return redirect(controllers.routes.HomeController.customer());
-    
-            }}
+            }
+else if(newCustomer.getId() != null){
+    newCustomer.update();
+}
+           
+            flash("success","Customer "+ newCustomer.getcName() +" was added");
+            return redirect(controllers.routes.HomeController.index());
+
+        }
+    }
+
+
+
+
+
+
             public Result deleteProduct(Long id){
                 Product.find.ref(id).delete();
                 flash("success", "Product has been deleted");
@@ -76,7 +141,10 @@ public class HomeController extends Controller {
                 flash("success", "Customer has been deleted");
                 return redirect(routes.HomeController.customer());
             }
-    }
+            
+
+            }
+    
 
 
 

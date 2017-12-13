@@ -36,6 +36,14 @@
       <td>@c.getNumber</td>
       <td>@c.getAge</td>
       <td>@c.getAddress</td>
+
+      <!-- -edit -->
+    <td><a href ="@routes.HomeController.updateCustomer(c.getId)"
+      class="button-xs btn-danger" >
+      <span class ="glyphicon glyphicon-pencil"></span></a></td> 
+
+
+<!-- -delete -->
       <td><a href ="@routes.HomeController.deleteCustomer(c.getId)" 
         class="button-xs btn-danger" onclick="return confirmDel();">
       <span class ="glyphicon glyphicon-trash"></span></a></td>
@@ -50,7 +58,7 @@
   
   </table>
   
-  <p> <a href = "@routes.HomeController.addCustomer()">
+  <p> <a href = "@routes.HomeController.addCustomerSubmit()">
     <button class = "btn btn-primary">Add a Customer</button>
   </a>
   </p>}
