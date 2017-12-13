@@ -7,15 +7,15 @@
 		revision="1.0.1"
 		conf="test"
 		confs="compile, runtime, test, provided, optional"
-		date="20171208124604"/>
+		date="20171213115141"/>
 	<dependencies>
 		<module organisation="org.scala-sbt" name="compiler-bridge_2.12">
 			<revision name="1.0.1" status="release" pubdate="20170915033334" resolver="public" artresolver="public" homepage="https://github.com/sbt/zinc" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="0">
 				<license name="BSD New" url="https://github.com/sbt/sbt/blob/0.13/LICENSE"/>
-				<metadata-artifact status="successful" details="" size="3882" time="472" location="/home/wdd/.ivy2/cache/org.scala-sbt/compiler-bridge_2.12/ivy-1.0.1.xml" searched="true" original-local-location="/home/wdd/.ivy2/cache/org.scala-sbt/compiler-bridge_2.12/ivy-1.0.1.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-sbt/compiler-bridge_2.12/1.0.1/compiler-bridge_2.12-1.0.1.pom"/>
+				<metadata-artifact status="successful" details="" size="3882" time="482" location="/home/wdd/.ivy2/cache/org.scala-sbt/compiler-bridge_2.12/ivy-1.0.1.xml" searched="true" original-local-location="/home/wdd/.ivy2/cache/org.scala-sbt/compiler-bridge_2.12/ivy-1.0.1.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-sbt/compiler-bridge_2.12/1.0.1/compiler-bridge_2.12-1.0.1.pom"/>
 				<caller organisation="org.scala-sbt.temp" name="temp-module-98ec89c315ed408f615fff2c4774286d17323b01" conf="test, compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="1.0.1"/>
 				<artifacts>
-					<artifact name="compiler-bridge_2.12" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="43003" time="610" location="/home/wdd/.ivy2/cache/org.scala-sbt/compiler-bridge_2.12/srcs/compiler-bridge_2.12-1.0.1-sources.jar">
+					<artifact name="compiler-bridge_2.12" type="src" ext="jar" extra-classifier="sources" status="successful" details="" size="43003" time="656" location="/home/wdd/.ivy2/cache/org.scala-sbt/compiler-bridge_2.12/srcs/compiler-bridge_2.12-1.0.1-sources.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-sbt/compiler-bridge_2.12/1.0.1/compiler-bridge_2.12-1.0.1-sources.jar"/>
 					</artifact>
 				</artifacts>
@@ -36,10 +36,10 @@
 		<module organisation="org.scala-sbt" name="util-interface">
 			<revision name="1.0.0" status="release" pubdate="20170810015509" resolver="public" artresolver="public" homepage="https://github.com/sbt/util" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="2">
 				<license name="BSD New" url="https://github.com/sbt/sbt/blob/0.13/LICENSE"/>
-				<metadata-artifact status="successful" details="" size="2775" time="458" location="/home/wdd/.ivy2/cache/org.scala-sbt/util-interface/ivy-1.0.0.xml" searched="true" original-local-location="/home/wdd/.ivy2/cache/org.scala-sbt/util-interface/ivy-1.0.0.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-sbt/util-interface/1.0.0/util-interface-1.0.0.pom"/>
+				<metadata-artifact status="successful" details="" size="2775" time="430" location="/home/wdd/.ivy2/cache/org.scala-sbt/util-interface/ivy-1.0.0.xml" searched="true" original-local-location="/home/wdd/.ivy2/cache/org.scala-sbt/util-interface/ivy-1.0.0.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-sbt/util-interface/1.0.0/util-interface-1.0.0.pom"/>
 				<caller organisation="org.scala-sbt" name="compiler-interface" conf="compile, runtime" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="1.0.1"/>
 				<artifacts>
-					<artifact name="util-interface" type="jar" ext="jar" status="successful" details="" size="2325" time="483" location="/home/wdd/.ivy2/cache/org.scala-sbt/util-interface/jars/util-interface-1.0.0.jar">
+					<artifact name="util-interface" type="jar" ext="jar" status="successful" details="" size="2325" time="492" location="/home/wdd/.ivy2/cache/org.scala-sbt/util-interface/jars/util-interface-1.0.0.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-sbt/util-interface/1.0.0/util-interface-1.0.0.jar"/>
 					</artifact>
 				</artifacts>
