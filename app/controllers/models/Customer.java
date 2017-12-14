@@ -12,8 +12,6 @@ import play.data.validation.*;
 public class Customer extends Model {
 
 @Id
-
-
 private Long id;
 
 @Constraints.Required

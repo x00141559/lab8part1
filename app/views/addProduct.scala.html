@@ -1,7 +1,7 @@
 @(productForm:Form[models.Product])
 @import helper._
 @main("Add Product") {
-< p class ="lead">Add or Update a Product</p>
+<p class ="lead">Add or Update a Product</p>
 @form(action=routes.HomeController.addProductSubmit(),'class -> "form horizontal", 'role -> "form"){
     @* CSRF attack prevention *@
     @* THis token, send by the controller, will be used to authenticate the form submission *@
@@ -18,8 +18,7 @@
     <div class="actions">
         <input type="submit" value="Add/Update Product" class="btn btn-primary">
         <a href ="@routes.HomeController.index">
-            <button type="button" class="btn btn=warning">Cancel <class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-            "Success! updated successfully">
+            <button type="button" class="btn btn=warning">Cancel</button>
         </a>
     </div>
 }@* End of form *@

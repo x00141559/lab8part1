@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/wdd/webapps/play/lab8part1/conf/routes
-// @DATE:Wed Dec 13 17:03:27 GMT 2017
+// @SOURCE:/home/wdd/webapps/lab8part1/conf/routes
+// @DATE:Thu Dec 14 10:21:10 GMT 2017
 
 import play.api.mvc.Call
 
@@ -23,6 +23,12 @@ package controllers {
     def addProductSubmit(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "addProductSubmit")
+    }
+  
+    // @LINE:14
+    def addCustomer(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "addCustomer")
     }
   
     // @LINE:15

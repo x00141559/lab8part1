@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/wdd/webapps/play/lab8part1/conf/routes
-// @DATE:Wed Dec 13 17:03:27 GMT 2017
+// @SOURCE:/home/wdd/webapps/lab8part1/conf/routes
+// @DATE:Thu Dec 14 10:21:10 GMT 2017
 
 
 package router {

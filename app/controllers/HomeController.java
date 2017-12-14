@@ -65,10 +65,6 @@ public class HomeController extends Controller {
     }
 
  
-
-
-
-
     public Result customer() {
         List<Customer> customerList = Customer.findAll();
         return ok(customer.render(customerList));
@@ -78,6 +74,10 @@ public class HomeController extends Controller {
         return ok(addProduct.render(productForm));
     }
 
+    public Result addCustomer(){
+        Form<Customer> customerForm = formFactory.form(Customer.class);
+        return ok(addCustomer.render(customerForm));
+    }
 
 
 
@@ -116,9 +116,9 @@ else if(newProduct.getId() != null){
             if(newCustomer.getId() == null){
                 newCustomer.save();
             }
-else if(newCustomer.getId() != null){
-    newCustomer.update();
-}
+            else if(newCustomer.getId() != null){
+                newCustomer.update();
+            }
            
             flash("success","Customer "+ newCustomer.getcName() +" was added");
             return redirect(controllers.routes.HomeController.index());

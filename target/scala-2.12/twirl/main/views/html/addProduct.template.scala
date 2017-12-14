@@ -33,7 +33,7 @@ object addProduct extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api
 
 Seq[Any](format.raw/*1.36*/("""
 """),_display_(/*3.2*/main("Add Product")/*3.21*/ {_display_(Seq[Any](format.raw/*3.23*/("""
-"""),format.raw/*4.1*/("""< p class ="lead">Add or Update a Product</p>
+"""),format.raw/*4.1*/("""<p class ="lead">Add or Update a Product</p>
 """),_display_(/*5.2*/form(action=routes.HomeController.addProductSubmit(),'class -> "form horizontal", 'role -> "form")/*5.100*/{_display_(Seq[Any](format.raw/*5.101*/("""
     """),format.raw/*6.33*/("""
     """),format.raw/*7.95*/("""
@@ -50,11 +50,10 @@ Seq[Any](format.raw/*1.36*/("""
     """),format.raw/*18.5*/("""<div class="actions">
         <input type="submit" value="Add/Update Product" class="btn btn-primary">
         <a href =""""),_display_(/*20.20*/routes/*20.26*/.HomeController.index),format.raw/*20.47*/("""">
-            <button type="button" class="btn btn=warning">Cancel <class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-            "Success! updated successfully">
+            <button type="button" class="btn btn=warning">Cancel</button>
         </a>
     </div>
-""")))}),format.raw/*25.19*/("""
+""")))}),format.raw/*24.19*/("""
 """)))}))
       }
     }
@@ -71,11 +70,11 @@ Seq[Any](format.raw/*1.36*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Wed Dec 13 17:14:01 GMT 2017
-                  SOURCE: /home/wdd/webapps/play/lab8part1/app/views/addProduct.scala.html
-                  HASH: c9a9cd026646fc325ec416b3e0c3f13ee146487d
-                  MATRIX: 967->1|1074->37|1119->35|1146->54|1173->73|1212->75|1239->76|1311->123|1418->221|1457->222|1489->255|1521->350|1552->356|1564->360|1594->370|1628->378|1724->453|1756->459|1866->548|1898->554|1996->631|2028->637|2126->714|2159->721|2244->785|2277->791|2426->913|2441->919|2483->940|2724->1167
-                  LINES: 28->1|31->2|34->1|35->3|35->3|35->3|36->4|37->5|37->5|37->5|38->6|39->7|40->8|40->8|40->8|43->11|43->11|44->12|44->12|45->13|45->13|46->14|46->14|48->16|48->16|50->18|52->20|52->20|52->20|57->25
+                  DATE: Thu Dec 14 11:08:06 GMT 2017
+                  SOURCE: /home/wdd/webapps/lab8part1/app/views/addProduct.scala.html
+                  HASH: ff8f8a80960529344221eecdaa6e020f78725869
+                  MATRIX: 967->1|1074->37|1119->35|1146->54|1173->73|1212->75|1239->76|1310->122|1417->220|1456->221|1488->254|1520->349|1551->355|1563->359|1593->369|1627->377|1723->452|1755->458|1865->547|1897->553|1995->630|2027->636|2125->713|2158->720|2243->784|2276->790|2425->912|2440->918|2482->939|2615->1058
+                  LINES: 28->1|31->2|34->1|35->3|35->3|35->3|36->4|37->5|37->5|37->5|38->6|39->7|40->8|40->8|40->8|43->11|43->11|44->12|44->12|45->13|45->13|46->14|46->14|48->16|48->16|50->18|52->20|52->20|52->20|56->24
                   -- GENERATED --
               */
           

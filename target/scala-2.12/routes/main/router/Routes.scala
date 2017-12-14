@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/home/wdd/webapps/play/lab8part1/conf/routes
-// @DATE:Wed Dec 13 17:03:27 GMT 2017
+// @SOURCE:/home/wdd/webapps/lab8part1/conf/routes
+// @DATE:Thu Dec 14 10:21:10 GMT 2017
 
 package router
 
@@ -48,6 +48,7 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """updateCustomer/""" + "$" + """id<[^/]+>""", """controllers.HomeController.updateCustomer(id:Long)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addProduct""", """controllers.HomeController.addProduct"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addProductSubmit""", """controllers.HomeController.addProductSubmit"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addCustomer""", """controllers.HomeController.addCustomer"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """addCustomerSubmit""", """controllers.HomeController.addCustomerSubmit"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.versioned(path:String = "/public", file:Asset)"""),
     Nil
@@ -201,11 +202,29 @@ class Routes(
     )
   )
 
+  // @LINE:14
+  private[this] lazy val controllers_HomeController_addCustomer8_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("addCustomer")))
+  )
+  private[this] lazy val controllers_HomeController_addCustomer8_invoker = createInvoker(
+    HomeController_0.addCustomer,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.HomeController",
+      "addCustomer",
+      Nil,
+      "GET",
+      this.prefix + """addCustomer""",
+      """""",
+      Seq()
+    )
+  )
+
   // @LINE:15
-  private[this] lazy val controllers_HomeController_addCustomerSubmit8_route = Route("GET",
+  private[this] lazy val controllers_HomeController_addCustomerSubmit9_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("addCustomerSubmit")))
   )
-  private[this] lazy val controllers_HomeController_addCustomerSubmit8_invoker = createInvoker(
+  private[this] lazy val controllers_HomeController_addCustomerSubmit9_invoker = createInvoker(
     HomeController_0.addCustomerSubmit,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -220,10 +239,10 @@ class Routes(
   )
 
   // @LINE:17
-  private[this] lazy val controllers_Assets_versioned9_route = Route("GET",
+  private[this] lazy val controllers_Assets_versioned10_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_versioned9_invoker = createInvoker(
+  private[this] lazy val controllers_Assets_versioned10_invoker = createInvoker(
     Assets_1.versioned(fakeValue[String], fakeValue[Asset]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -288,16 +307,22 @@ class Routes(
         controllers_HomeController_addProductSubmit7_invoker.call(HomeController_0.addProductSubmit)
       }
   
-    // @LINE:15
-    case controllers_HomeController_addCustomerSubmit8_route(params@_) =>
+    // @LINE:14
+    case controllers_HomeController_addCustomer8_route(params@_) =>
       call { 
-        controllers_HomeController_addCustomerSubmit8_invoker.call(HomeController_0.addCustomerSubmit)
+        controllers_HomeController_addCustomer8_invoker.call(HomeController_0.addCustomer)
+      }
+  
+    // @LINE:15
+    case controllers_HomeController_addCustomerSubmit9_route(params@_) =>
+      call { 
+        controllers_HomeController_addCustomerSubmit9_invoker.call(HomeController_0.addCustomerSubmit)
       }
   
     // @LINE:17
-    case controllers_Assets_versioned9_route(params@_) =>
+    case controllers_Assets_versioned10_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
-        controllers_Assets_versioned9_invoker.call(Assets_1.versioned(path, file))
+        controllers_Assets_versioned10_invoker.call(Assets_1.versioned(path, file))
       }
   }
 }

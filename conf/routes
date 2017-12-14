@@ -11,7 +11,7 @@ GET     /updateProduct/:id                         controllers.HomeController.up
 GET     /updateCustomer/:id                         controllers.HomeController.updateCustomer(id: Long)
 GET     /addProduct                         controllers.HomeController.addProduct
 GET     /addProductSubmit                   controllers.HomeController.addProductSubmit
-
+GET     /addCustomer                        controllers.HomeController.addCustomer
 GET     /addCustomerSubmit                   controllers.HomeController.addCustomerSubmit
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
