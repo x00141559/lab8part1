@@ -31,15 +31,24 @@
 </div>
 
 <ul class="nav navbar-nav">
-    
+    <li @if(title=="Product"){class="active"}>
+        <a href ="@routes.HomeController.index()">Product</a>
+    </li>
   
+    <li><a href="#">About</a></li>
+
+    <li><a href="">Services</a></li>
+
+    <li><a href="">Contact</a></li>
+    <li @if(title=="Login"){class="active"}></li>
+    <a href="@routes.LoginController.login()">Login</a>
+
     <li><a href="/customer">Customer</a></li>
        
     <li><a href="/">Product</a></li>
     
-    <li><a href="">Services</a></li>
+   
     
-    <li><a href="#">About</a></li>
     </ul>
 <!--     
     </ul>
