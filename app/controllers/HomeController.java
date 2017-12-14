@@ -59,9 +59,15 @@ public class HomeController extends Controller {
     public HomeController (FormFactory f){
     this.formFactory = f;}
    
-    public Result index() {
-        List<Product> productList = Product.findAll();
-        return ok(index.render(productList));
+    public Result index(Long cat) {
+        List<Product> productList = null;
+        List<Category> categoryList = Category.findAll();
+        if (cat ==0){
+            productList = Product.findAll();
+        } else {
+            productList = Category.find.ref(cat).getProducts();
+        }
+        return ok(index.render(productList,categoryList));
     }
 
  
@@ -97,7 +103,7 @@ else if(newProduct.getId() != null){
 }
            
             flash("The product","Product "+"has been added successfully"+ newProduct.getName() +" was added");
-            return redirect(controllers.routes.HomeController.index());
+            return redirect(controllers.routes.HomeController.index(0));
 
         }
     }
@@ -134,7 +140,7 @@ else if(newProduct.getId() != null){
             public Result deleteProduct(Long id){
                 Product.find.ref(id).delete();
                 flash("success", "Product has been deleted");
-                return redirect(routes.HomeController.index());
+                return redirect(routes.HomeController.index(0));
             }
             public Result deleteCustomer(Long id){
                 Customer.find.ref(id).delete();

@@ -1,8 +1,22 @@
 
- @(products: List[models.Product])
+ @(products: List[models.Product], categories: List[models.Category])
  @main("Products Page") {
   
   <p class="lead">Product Catalogue</p>
+<div class="row">
+  <div class="col-sm-2">
+
+<h4>Categories</h4>
+<div class="list-group">
+  <a href="@routes.HomeController.index(0)" class="list-group-item">All categories</a>
+  @for(c <- categories){
+    <a href ="@routes.HomeController.index(c.getId)" class="list-group-item">@c.getName
+      <span class="badge">@c.getProducts.size()</span>
+    </a>
+  }
+</ul>
+</div>
+<div class="col-sm-10">
   @* Display successful new product message from flash - if set *@
   @if(flash.containsKey("success")) {
     <div class="alert alert-success">
@@ -21,7 +35,9 @@
   <th>ID</th>
   
   <th>Name</th>
-  
+
+  <th>Category</th>
+
   <th>Description</th>
   
   <th>Stock</th>
@@ -38,6 +54,7 @@
     <tr>
       <td>@p.getId</td>
       <td>@p.getName</td>
+      <td>@p.getCategory.getName</td>
       <td>@p.getDescription</td>
       <td>@p.getStock</td>
     <numeric><td>&euro; @("%.2f".format(p.getPrice))</td></numeric>
@@ -65,6 +82,8 @@
   <button class = "btn btn-primary">Add a Product</button>
 </a>
 </p>
+</div>
+</div>
 }
 
  

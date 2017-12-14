@@ -40,7 +40,7 @@ Seq[Any](format.raw/*1.38*/("""
     """),_display_(/*8.6*/CSRF/*8.10*/.formField),format.raw/*8.20*/("""
 
 
-    """),_display_(/*11.6*/inputText(customerForm("name"), '_label -> "name", 'class -> "form-control")),format.raw/*11.82*/("""
+    """),_display_(/*11.6*/inputText(customerForm("cName"), '_label -> "name", 'class -> "form-control")),format.raw/*11.83*/("""
     """),_display_(/*12.6*/inputText(customerForm("number"), '_label -> "number", 'class -> "form-control")),format.raw/*12.86*/("""
     """),_display_(/*13.6*/inputText(customerForm("age"), '_label -> "age", 'class -> "form-control")),format.raw/*13.80*/("""
     """),_display_(/*14.6*/inputText(customerForm("address"), '_label -> "address", 'class -> "form-control")),format.raw/*14.88*/("""
@@ -77,10 +77,10 @@ Seq[Any](format.raw/*1.38*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Thu Dec 14 11:03:44 GMT 2017
+                  DATE: Thu Dec 14 11:59:06 GMT 2017
                   SOURCE: /home/wdd/webapps/lab8part1/app/views/addCustomer.scala.html
-                  HASH: 6ca938c632414d31720372cf4a6508d6e47f22a3
-                  MATRIX: 969->1|1078->39|1123->37|1150->56|1178->76|1217->78|1244->79|1315->125|1423->224|1462->225|1494->258|1526->353|1557->359|1569->363|1599->373|1633->381|1730->457|1762->463|1863->543|1895->549|1990->623|2022->629|2125->711|2158->718|2244->783|2277->789|2427->912|2442->918|2487->942|2620->1061|2653->1087
+                  HASH: 60cb0fec44a402cccbbdf99e0b338d54d8aa15fa
+                  MATRIX: 969->1|1078->39|1123->37|1150->56|1178->76|1217->78|1244->79|1315->125|1423->224|1462->225|1494->258|1526->353|1557->359|1569->363|1599->373|1633->381|1731->458|1763->464|1864->544|1896->550|1991->624|2023->630|2126->712|2159->719|2245->784|2278->790|2428->913|2443->919|2488->943|2621->1062|2654->1088
                   LINES: 28->1|31->2|34->1|35->3|35->3|35->3|36->4|37->5|37->5|37->5|38->6|39->7|40->8|40->8|40->8|43->11|43->11|44->12|44->12|45->13|45->13|46->14|46->14|48->16|48->16|50->18|52->20|52->20|52->20|56->24|57->25
                   -- GENERATED --
               */

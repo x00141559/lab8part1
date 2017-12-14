@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/wdd/webapps/lab8part1/conf/routes
-// @DATE:Thu Dec 14 10:21:10 GMT 2017
+// @DATE:Thu Dec 14 12:39:30 GMT 2017
 
 package router
 
@@ -17,7 +17,7 @@ class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
   // @LINE:6
   HomeController_0: controllers.HomeController,
-  // @LINE:17
+  // @LINE:18
   Assets_1: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
@@ -26,7 +26,7 @@ class Routes(
    def this(errorHandler: play.api.http.HttpErrorHandler,
     // @LINE:6
     HomeController_0: controllers.HomeController,
-    // @LINE:17
+    // @LINE:18
     Assets_1: controllers.Assets
   ) = this(errorHandler, HomeController_0, Assets_1, "/")
 
@@ -40,7 +40,7 @@ class Routes(
   }
 
   def documentation = List(
-    ("""GET""", this.prefix, """controllers.HomeController.index"""),
+    ("""GET""", this.prefix, """controllers.HomeController.index(cat:Long ?= 0L)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """customer""", """controllers.HomeController.customer"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """delCustomer/""" + "$" + """id<[^/]+>""", """controllers.HomeController.deleteCustomer(id:Long)"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """delProduct/""" + "$" + """id<[^/]+>""", """controllers.HomeController.deleteProduct(id:Long)"""),
@@ -63,12 +63,12 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix)))
   )
   private[this] lazy val controllers_HomeController_index0_invoker = createInvoker(
-    HomeController_0.index,
+    HomeController_0.index(fakeValue[Long]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.HomeController",
       "index",
-      Nil,
+      Seq(classOf[Long]),
       "GET",
       this.prefix + """""",
       """ An example controller showing a sample home page""",
@@ -238,7 +238,7 @@ class Routes(
     )
   )
 
-  // @LINE:17
+  // @LINE:18
   private[this] lazy val controllers_Assets_versioned10_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
@@ -261,8 +261,8 @@ class Routes(
   
     // @LINE:6
     case controllers_HomeController_index0_route(params@_) =>
-      call { 
-        controllers_HomeController_index0_invoker.call(HomeController_0.index)
+      call(params.fromQuery[Long]("cat", Some(0L))) { (cat) =>
+        controllers_HomeController_index0_invoker.call(HomeController_0.index(cat))
       }
   
     // @LINE:7
@@ -319,7 +319,7 @@ class Routes(
         controllers_HomeController_addCustomerSubmit9_invoker.call(HomeController_0.addCustomerSubmit)
       }
   
-    // @LINE:17
+    // @LINE:18
     case controllers_Assets_versioned10_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
         controllers_Assets_versioned10_invoker.call(Assets_1.versioned(path, file))

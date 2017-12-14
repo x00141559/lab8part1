@@ -10,15 +10,14 @@ import play.data.validation.*;
 @Entity
 
 public class Product extends Model {
-
+  
 @Id
-
-
 private Long id;
 
 @Constraints.Required
 private String name;
-
+@ManyToOne
+private Category category;
 @Constraints.Required
 private String description;
 
@@ -27,6 +26,8 @@ private int stock;
 
 @Constraints.Required
 private double price;
+
+
 
 // Default Constructor
 
@@ -101,5 +102,11 @@ public Double getPrice(){
 }
 public void setPrice(double price){
 this.price = price;
+}
+public void setCategory(Category c){
+this.category =c;
+}
+public Category getCategory(){
+    return category;
 }
 }
