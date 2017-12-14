@@ -28,7 +28,7 @@ public class HomeController extends Controller {
         return ok(addProduct.render(productForm));
         }
 
-
+    
 
 
 
@@ -96,7 +96,7 @@ else if(newProduct.getId() != null){
     newProduct.update();
 }
            
-            flash("success","Product "+ newProduct.getName() +" was added");
+            flash("The product","Product "+"has been added successfully"+ newProduct.getName() +" was added");
             return redirect(controllers.routes.HomeController.index());
 
         }
@@ -121,7 +121,7 @@ else if(newProduct.getId() != null){
             }
            
             flash("success","Customer "+ newCustomer.getcName() +" was added");
-            return redirect(controllers.routes.HomeController.index());
+            return redirect(controllers.routes.HomeController.customer());
 
         }
     }
