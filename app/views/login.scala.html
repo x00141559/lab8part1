@@ -29,7 +29,9 @@
                 '_class -> "form-control input-xs", 'placeholder -> "Email")
             </div>
             <div class="form-group">
-                @inputPassword(loginForm("pass"))
+                @inputPassword(loginForm("password"), '_label  -> "",
+                '_class -> "form-control input-xs", 'placeholder -> "Password")
+                </div>
         }
     </div>
 }

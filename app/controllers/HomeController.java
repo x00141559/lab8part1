@@ -14,6 +14,7 @@ import views.html.*;
  * to the application's home page.
  */
 public class HomeController extends Controller {
+    @Security.Authenticated(Secured.class)
     @Transactional
     public Result updateProduct(Long id){
         Product p;

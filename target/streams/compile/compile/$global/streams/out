@@ -1,4 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/lab8part1/app/controllers/models/Category.java:66:1: cannot find symbol[0m
-[0m[[0m[31merror[0m] [0m[0m  symbol:   method getNAme()[0m
-[0m[[0m[31merror[0m] [0m[0m  location: variable c of type models.Category[0m
-[0m[[0m[31merror[0m] [0m[0m            options.put(c.getId().toString(), c.getNAme());[0m
+[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/lab8part1/app/controllers/models/Secured.java:15:1: cannot find symbol[0m
+[0m[[0m[31merror[0m] [0m[0m  symbol:   variable LOginController[0m
+[0m[[0m[31merror[0m] [0m[0m  location: class controllers.routes[0m
+[0m[[0m[31merror[0m] [0m[0m    return redirect(controllers.routes.LOginController.login());[0m

@@ -63,15 +63,26 @@ Seq[Any](format.raw/*1.32*/("""
 </div>
 
 <ul class="nav navbar-nav">
-    
+    <li """),_display_(/*34.10*/if(title=="Product")/*34.30*/{_display_(Seq[Any](format.raw/*34.31*/("""class="active"""")))}),format.raw/*34.46*/(""">
+        <a href =""""),_display_(/*35.20*/routes/*35.26*/.HomeController.index()),format.raw/*35.49*/("""">Product</a>
+    </li>
   
-    <li><a href="/customer">Customer</a></li>
-       
-    <li><a href="/">Product</a></li>
-    
-    <li><a href="">Services</a></li>
-    
     <li><a href="#">About</a></li>
+
+    <li><a href="#">Services</a></li>
+
+    
+
+    <li """),_display_(/*44.10*/if(title=="Login")/*44.28*/{_display_(Seq[Any](format.raw/*44.29*/("""class="active"""")))}),format.raw/*44.44*/(""">
+    <a href=""""),_display_(/*45.15*/routes/*45.21*/.LoginController.login()),format.raw/*45.45*/("""">Login</a></li>
+
+    <li """),_display_(/*47.10*/if(title=="Customer")/*47.31*/{_display_(Seq[Any](format.raw/*47.32*/("""class="active"""")))}),format.raw/*47.47*/(""">
+        <a href=""""),_display_(/*48.19*/routes/*48.25*/.HomeController.customer()),format.raw/*48.51*/("""">Customer</a></li>
+       
+   
+    
+   
+    
     </ul>
 <!--     
     </ul>
@@ -95,9 +106,9 @@ Seq[Any](format.raw/*1.32*/("""
 
 <div class="col-md-12">
 
-"""),_display_(/*66.2*/content),format.raw/*66.9*/("""
+"""),_display_(/*77.2*/content),format.raw/*77.9*/("""
 
-"""),format.raw/*68.1*/("""</div>
+"""),format.raw/*79.1*/("""</div>
 
 </row>
 
@@ -116,7 +127,7 @@ Copyright <strong>Online Shop</strong>
 </row>
 
 </container>
-<script src=""""),_display_(/*87.15*/routes/*87.21*/.Assets.versioned("javascripts/main.js")),format.raw/*87.61*/(""""></script>
+<script src=""""),_display_(/*98.15*/routes/*98.21*/.Assets.versioned("javascripts/main.js")),format.raw/*98.61*/(""""></script>
 </body>
 
 </html>
@@ -136,11 +147,11 @@ Copyright <strong>Online Shop</strong>
 
               /*
                   -- GENERATED --
-                  DATE: Thu Dec 14 12:39:30 GMT 2017
+                  DATE: Fri Dec 15 08:47:17 GMT 2017
                   SOURCE: /home/wdd/webapps/lab8part1/app/views/main.scala.html
-                  HASH: 084dd2b727e29c095b43ab0af9b3983e239d8ea7
-                  MATRIX: 952->1|1077->31|1105->33|1221->122|1247->127|1446->299|1461->305|1523->346|2253->1050|2280->1057|2309->1059|2494->1217|2509->1223|2570->1263
-                  LINES: 28->1|33->1|35->3|43->11|43->11|49->17|49->17|49->17|98->66|98->66|100->68|119->87|119->87|119->87
+                  HASH: edcc080fa5dbb38c297f82f10acfd66f84c4d3ee
+                  MATRIX: 952->1|1077->31|1105->33|1221->122|1247->127|1446->299|1461->305|1523->346|1782->578|1811->598|1850->599|1896->614|1944->635|1959->641|2003->664|2147->781|2174->799|2213->800|2259->815|2302->831|2317->837|2362->861|2416->888|2446->909|2485->910|2531->925|2578->945|2593->951|2640->977|3012->1323|3039->1330|3068->1332|3253->1490|3268->1496|3329->1536
+                  LINES: 28->1|33->1|35->3|43->11|43->11|49->17|49->17|49->17|66->34|66->34|66->34|66->34|67->35|67->35|67->35|76->44|76->44|76->44|76->44|77->45|77->45|77->45|79->47|79->47|79->47|79->47|80->48|80->48|80->48|109->77|109->77|111->79|130->98|130->98|130->98
                   -- GENERATED --
               */
           

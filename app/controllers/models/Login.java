@@ -1,13 +1,16 @@
 package models.users;
 
-public class Login {
+public class Login  {
+
     private String email;
     private String password;
 
     public String validate(){
+
    if (User.authenticate(getEmail(),getPassword()) == null) {
     return "Invalid user or password";
     }
+
    return null;
     }
 
