@@ -1,6 +1,6 @@
 
- @(customer: List[models.Customer])
- @main("Customer Page") {
+ @(customer: List[models.Customer], user:models.users.User)
+ @main("Customer Page",user) {
   
   <p class="lead">customer Catalogue</p>
   

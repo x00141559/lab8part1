@@ -22,19 +22,19 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object login extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[Form[models.users.Login],play.twirl.api.HtmlFormat.Appendable] {
+object login extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[Form[models.users.Login],models.users.User,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(loginForm: Form[models.users.Login]):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(loginForm: Form[models.users.Login], user: models.users.User):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 /*2.2*/import helper._
 
 
-Seq[Any](format.raw/*1.39*/("""
+Seq[Any](format.raw/*1.64*/("""
 """),format.raw/*3.1*/("""
 """),format.raw/*4.73*/("""
-"""),_display_(/*5.2*/main("Login")/*5.15*/ {_display_(Seq[Any](format.raw/*5.17*/("""
+"""),_display_(/*5.2*/main("Login", user)/*5.21*/ {_display_(Seq[Any](format.raw/*5.23*/("""
     """),format.raw/*6.5*/("""<div class="col-xs-4">
         <h3>Sign in</h3>
 
@@ -71,9 +71,9 @@ Seq[Any](format.raw/*1.39*/("""
     }
   }
 
-  def render(loginForm:Form[models.users.Login]): play.twirl.api.HtmlFormat.Appendable = apply(loginForm)
+  def render(loginForm:Form[models.users.Login],user:models.users.User): play.twirl.api.HtmlFormat.Appendable = apply(loginForm,user)
 
-  def f:((Form[models.users.Login]) => play.twirl.api.HtmlFormat.Appendable) = (loginForm) => apply(loginForm)
+  def f:((Form[models.users.Login],models.users.User) => play.twirl.api.HtmlFormat.Appendable) = (loginForm,user) => apply(loginForm,user)
 
   def ref: this.type = this
 
@@ -82,10 +82,10 @@ Seq[Any](format.raw/*1.39*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Fri Dec 15 08:36:34 GMT 2017
+                  DATE: Fri Dec 15 09:58:05 GMT 2017
                   SOURCE: /home/wdd/webapps/lab8part1/app/views/login.scala.html
-                  HASH: 7e6f7105e7978143acbc0a3115fd13a7119cb913
-                  MATRIX: 966->1|1076->40|1121->38|1148->56|1176->129|1203->131|1224->144|1263->146|1294->151|1378->209|1415->238|1453->239|1494->252|1570->301|1588->310|1629->330|1671->344|1716->358|1754->369|1793->399|1833->401|1874->414|1950->463|1964->468|2006->489|2047->502|2092->516|2130->527|2145->533|2218->597|2257->598|2298->639|2340->742|2381->756|2394->760|2425->770|2467->784|2536->826|2679->948|2720->961|2808->1022|2961->1154|3006->1171|3053->1187|3085->1192
+                  HASH: ff07d4a8b0cb317488b922ed905e1e71de3a9c44
+                  MATRIX: 984->1|1119->65|1164->63|1191->81|1219->154|1246->156|1273->175|1312->177|1343->182|1427->240|1464->269|1502->270|1543->283|1619->332|1637->341|1678->361|1720->375|1765->389|1803->400|1842->430|1882->432|1923->445|1999->494|2013->499|2055->520|2096->533|2141->547|2179->558|2194->564|2267->628|2306->629|2347->670|2389->773|2430->787|2443->791|2474->801|2516->815|2585->857|2728->979|2769->992|2857->1053|3010->1185|3055->1202|3102->1218|3134->1223
                   LINES: 28->1|31->2|34->1|35->3|36->4|37->5|37->5|37->5|38->6|41->9|41->9|41->9|42->10|43->11|43->11|43->11|45->13|46->14|48->16|48->16|48->16|49->17|50->18|50->18|50->18|51->19|52->20|54->22|54->22|54->22|54->22|55->23|56->24|57->25|57->25|57->25|59->27|60->28|61->29|62->30|64->32|65->33|66->34|67->35|68->36
                   -- GENERATED --
               */

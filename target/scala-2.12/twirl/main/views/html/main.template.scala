@@ -22,15 +22,15 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object main extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[String,Html,play.twirl.api.HtmlFormat.Appendable] {
+object main extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template3[String,models.users.User,Html,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(title: String)(content: Html):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(title: String, user: models.users.User)(content: Html):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*1.32*/("""
+Seq[Any](format.raw/*1.57*/("""
 
 """),format.raw/*3.1*/("""<!DOCTYPE html>
 
@@ -71,13 +71,20 @@ Seq[Any](format.raw/*1.32*/("""
 
     <li><a href="#">Services</a></li>
 
+    <li """),_display_(/*42.10*/if(title=="Customer")/*42.31*/{_display_(Seq[Any](format.raw/*42.32*/("""class="active"""")))}),format.raw/*42.47*/(""">
+            <a href=""""),_display_(/*43.23*/routes/*43.29*/.HomeController.customer()),format.raw/*43.55*/("""">Customer</a></li>
+
+    <li """),_display_(/*45.10*/if(title=="Login")/*45.28*/{_display_(Seq[Any](format.raw/*45.29*/("""class="active"""")))}),format.raw/*45.44*/(""">
+        """),_display_(/*46.10*/if(user !=null)/*46.25*/{_display_(Seq[Any](format.raw/*46.26*/("""
+
+        """),format.raw/*48.9*/("""<a href=""""),_display_(/*48.19*/routes/*48.25*/.LoginController.logout()),format.raw/*48.50*/("""">Logout """),_display_(/*48.60*/user/*48.64*/.getName()),format.raw/*48.74*/("""</a>
+        """)))}/*49.11*/else/*49.16*/{_display_(Seq[Any](format.raw/*49.17*/("""
+
+        
+    """),format.raw/*52.5*/("""<a href=""""),_display_(/*52.15*/routes/*52.21*/.LoginController.login()),format.raw/*52.45*/("""">Login</a>
+        """)))}),format.raw/*53.10*/(""" """),format.raw/*53.11*/("""</li>
+
     
-
-    <li """),_display_(/*44.10*/if(title=="Login")/*44.28*/{_display_(Seq[Any](format.raw/*44.29*/("""class="active"""")))}),format.raw/*44.44*/(""">
-    <a href=""""),_display_(/*45.15*/routes/*45.21*/.LoginController.login()),format.raw/*45.45*/("""">Login</a></li>
-
-    <li """),_display_(/*47.10*/if(title=="Customer")/*47.31*/{_display_(Seq[Any](format.raw/*47.32*/("""class="active"""")))}),format.raw/*47.47*/(""">
-        <a href=""""),_display_(/*48.19*/routes/*48.25*/.HomeController.customer()),format.raw/*48.51*/("""">Customer</a></li>
        
    
     
@@ -106,9 +113,9 @@ Seq[Any](format.raw/*1.32*/("""
 
 <div class="col-md-12">
 
-"""),_display_(/*77.2*/content),format.raw/*77.9*/("""
+"""),_display_(/*84.2*/content),format.raw/*84.9*/("""
 
-"""),format.raw/*79.1*/("""</div>
+"""),format.raw/*86.1*/("""</div>
 
 </row>
 
@@ -127,7 +134,7 @@ Copyright <strong>Online Shop</strong>
 </row>
 
 </container>
-<script src=""""),_display_(/*98.15*/routes/*98.21*/.Assets.versioned("javascripts/main.js")),format.raw/*98.61*/(""""></script>
+<script src=""""),_display_(/*105.15*/routes/*105.21*/.Assets.versioned("javascripts/main.js")),format.raw/*105.61*/(""""></script>
 </body>
 
 </html>
@@ -136,9 +143,9 @@ Copyright <strong>Online Shop</strong>
     }
   }
 
-  def render(title:String,content:Html): play.twirl.api.HtmlFormat.Appendable = apply(title)(content)
+  def render(title:String,user:models.users.User,content:Html): play.twirl.api.HtmlFormat.Appendable = apply(title,user)(content)
 
-  def f:((String) => (Html) => play.twirl.api.HtmlFormat.Appendable) = (title) => (content) => apply(title)(content)
+  def f:((String,models.users.User) => (Html) => play.twirl.api.HtmlFormat.Appendable) = (title,user) => (content) => apply(title,user)(content)
 
   def ref: this.type = this
 
@@ -147,11 +154,11 @@ Copyright <strong>Online Shop</strong>
 
               /*
                   -- GENERATED --
-                  DATE: Fri Dec 15 08:47:17 GMT 2017
+                  DATE: Fri Dec 15 09:58:05 GMT 2017
                   SOURCE: /home/wdd/webapps/lab8part1/app/views/main.scala.html
-                  HASH: edcc080fa5dbb38c297f82f10acfd66f84c4d3ee
-                  MATRIX: 952->1|1077->31|1105->33|1221->122|1247->127|1446->299|1461->305|1523->346|1782->578|1811->598|1850->599|1896->614|1944->635|1959->641|2003->664|2147->781|2174->799|2213->800|2259->815|2302->831|2317->837|2362->861|2416->888|2446->909|2485->910|2531->925|2578->945|2593->951|2640->977|3012->1323|3039->1330|3068->1332|3253->1490|3268->1496|3329->1536
-                  LINES: 28->1|33->1|35->3|43->11|43->11|49->17|49->17|49->17|66->34|66->34|66->34|66->34|67->35|67->35|67->35|76->44|76->44|76->44|76->44|77->45|77->45|77->45|79->47|79->47|79->47|79->47|80->48|80->48|80->48|109->77|109->77|111->79|130->98|130->98|130->98
+                  HASH: ac5b32bcbf66d4098419448989adaf08186caa9f
+                  MATRIX: 970->1|1120->56|1148->58|1264->147|1290->152|1489->324|1504->330|1566->371|1825->603|1854->623|1893->624|1939->639|1987->660|2002->666|2046->689|2184->800|2214->821|2253->822|2299->837|2350->861|2365->867|2412->893|2469->923|2496->941|2535->942|2581->957|2619->968|2643->983|2682->984|2719->994|2756->1004|2771->1010|2817->1035|2854->1045|2867->1049|2898->1059|2931->1074|2944->1079|2983->1080|3025->1095|3062->1105|3077->1111|3122->1135|3174->1156|3203->1157|3567->1495|3594->1502|3623->1504|3809->1662|3825->1668|3887->1708
+                  LINES: 28->1|33->1|35->3|43->11|43->11|49->17|49->17|49->17|66->34|66->34|66->34|66->34|67->35|67->35|67->35|74->42|74->42|74->42|74->42|75->43|75->43|75->43|77->45|77->45|77->45|77->45|78->46|78->46|78->46|80->48|80->48|80->48|80->48|80->48|80->48|80->48|81->49|81->49|81->49|84->52|84->52|84->52|84->52|85->53|85->53|116->84|116->84|118->86|137->105|137->105|137->105
                   -- GENERATED --
               */
           

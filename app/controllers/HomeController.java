@@ -9,6 +9,7 @@ import java.util.List;
 import javax.inject.Inject;
 import models.*;
 import views.html.*;
+import models.users.*;
 /**
  * This controller contains an action to handle HTTP requests
  * to the application's home page.
@@ -26,7 +27,7 @@ public class HomeController extends Controller {
             return badRequest("error");
         }
 
-        return ok(addProduct.render(productForm));
+        return ok(addProduct.render(productForm,User.getUserById(session().get("email"))));
         }
 
     
@@ -48,7 +49,7 @@ public class HomeController extends Controller {
                 return badRequest("error");
             }
     
-            return ok(addCustomer.render(customerForm));
+            return ok(addCustomer.render(customerForm, User.getUserById(session().get("email"))));
             }
 
 
@@ -68,22 +69,22 @@ public class HomeController extends Controller {
         } else {
             productList = Category.find.ref(cat).getProducts();
         }
-        return ok(index.render(productList,categoryList));
+        return ok(index.render(productList,categoryList, User.getUserById(session().get("email"))));
     }
 
  
     public Result customer() {
         List<Customer> customerList = Customer.findAll();
-        return ok(customer.render(customerList));
+        return ok(customer.render(customerList,User.getUserById(session().get("email"))));
     }
     public Result addProduct(){
         Form<Product> productForm = formFactory.form(Product.class);
-        return ok(addProduct.render(productForm));
+        return ok(addProduct.render(productForm,User.getUserById(session().get("email"))));
     }
 
     public Result addCustomer(){
         Form<Customer> customerForm = formFactory.form(Customer.class);
-        return ok(addCustomer.render(customerForm));
+        return ok(addCustomer.render(customerForm,User.getUserById(session().get("email"))));
     }
 
 
@@ -94,7 +95,7 @@ public class HomeController extends Controller {
         Form<Product> newProductForm = formFactory.form(Product.class).bindFromRequest();
 
         if (newProductForm.hasErrors()) {
-            return badRequest(addProduct.render(newProductForm));
+            return badRequest(addProduct.render(newProductForm,User.getUserById(session().get("email"))));
         }else { Product newProduct = newProductForm.get();
             if(newProduct.getId() == null){
                 newProduct.save();
@@ -118,7 +119,7 @@ else if(newProduct.getId() != null){
         Form<Customer> newCustomerForm = formFactory.form(Customer.class).bindFromRequest();
 
         if (newCustomerForm.hasErrors()) {
-            return badRequest(addCustomer.render(newCustomerForm));
+            return badRequest(addCustomer.render(newCustomerForm, User.getUserById(session().get("email"))));
         }else { Customer newCustomer = newCustomerForm.get();
             if(newCustomer.getId() == null){
                 newCustomer.save();

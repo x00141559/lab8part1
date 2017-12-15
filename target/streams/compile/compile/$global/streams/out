@@ -1,4 +1,4 @@
-[0m[[0m[31merror[0m] [0m[0m/home/wdd/webapps/lab8part1/app/controllers/models/Secured.java:15:1: cannot find symbol[0m
-[0m[[0m[31merror[0m] [0m[0m  symbol:   variable LOginController[0m
-[0m[[0m[31merror[0m] [0m[0m  location: class controllers.routes[0m
-[0m[[0m[31merror[0m] [0m[0m    return redirect(controllers.routes.LOginController.login());[0m
+[0m[[0m[33mwarn[0m] [0m[0m/home/wdd/webapps/lab8part1/app/views/login.scala.html:11:28: method globalError in class Form is deprecated: see corresponding Javadoc for more information.[0m
+[0m[[0m[33mwarn[0m] [0m[0m                @loginForm.globalError.message[0m
+[0m[[0m[33mwarn[0m] [0m[0m                           ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

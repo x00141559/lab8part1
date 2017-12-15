@@ -70,4 +70,17 @@ public class User extends Model {
         return find.query().where().eq("email", email).eq("password", password).findUnique();
     }
 
-}
+
+    public static User getUserById(String id){
+
+    if(id == null)
+
+    return null;
+
+    else 
+
+    return find.byId(id);
+    
+    }
+
+    }

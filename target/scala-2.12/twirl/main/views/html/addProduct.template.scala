@@ -22,17 +22,17 @@ import play.mvc.Http.Context.Implicit._
 import play.data._
 import play.core.j.PlayFormsMagicForJava._
 
-object addProduct extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template1[Form[models.Product],play.twirl.api.HtmlFormat.Appendable] {
+object addProduct extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template2[Form[models.Product],models.users.User,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(productForm:Form[models.Product]):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(productForm:Form[models.Product], user: models.users.User):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 /*2.2*/import helper._
 
 
-Seq[Any](format.raw/*1.36*/("""
-"""),_display_(/*3.2*/main("Add Product")/*3.21*/ {_display_(Seq[Any](format.raw/*3.23*/("""
+Seq[Any](format.raw/*1.61*/("""
+"""),_display_(/*3.2*/main("Add Product", user)/*3.27*/ {_display_(Seq[Any](format.raw/*3.29*/("""
 """),format.raw/*4.1*/("""<p class ="lead">Add or Update a Product</p>
 """),_display_(/*5.2*/form(action=routes.HomeController.addProductSubmit(),'class -> "form horizontal", 'role -> "form")/*5.100*/{_display_(Seq[Any](format.raw/*5.101*/("""
     """),format.raw/*6.33*/("""
@@ -66,9 +66,9 @@ Seq[Any](format.raw/*1.36*/("""
     }
   }
 
-  def render(productForm:Form[models.Product]): play.twirl.api.HtmlFormat.Appendable = apply(productForm)
+  def render(productForm:Form[models.Product],user:models.users.User): play.twirl.api.HtmlFormat.Appendable = apply(productForm,user)
 
-  def f:((Form[models.Product]) => play.twirl.api.HtmlFormat.Appendable) = (productForm) => apply(productForm)
+  def f:((Form[models.Product],models.users.User) => play.twirl.api.HtmlFormat.Appendable) = (productForm,user) => apply(productForm,user)
 
   def ref: this.type = this
 
@@ -77,10 +77,10 @@ Seq[Any](format.raw/*1.36*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Thu Dec 14 12:48:59 GMT 2017
+                  DATE: Fri Dec 15 09:58:05 GMT 2017
                   SOURCE: /home/wdd/webapps/lab8part1/app/views/addProduct.scala.html
-                  HASH: 435a40ae50a7dac39e5e979ee561267aab5016b6
-                  MATRIX: 967->1|1074->37|1119->35|1146->54|1173->73|1212->75|1239->76|1310->122|1417->220|1456->221|1488->254|1520->349|1551->355|1563->359|1593->369|1627->377|1723->452|1755->458|1865->547|1897->553|2133->769|2170->780|2268->857|2300->863|2398->940|2431->947|2516->1011|2549->1017|2698->1139|2713->1145|2758->1169|2891->1288
+                  HASH: 68f0a429ae21b8c34bfe1297a39bef8854276f2d
+                  MATRIX: 985->1|1117->62|1162->60|1189->79|1222->104|1261->106|1288->107|1359->153|1466->251|1505->252|1537->285|1569->380|1600->386|1612->390|1642->400|1676->408|1772->483|1804->489|1914->578|1946->584|2182->800|2219->811|2317->888|2349->894|2447->971|2480->978|2565->1042|2598->1048|2747->1170|2762->1176|2807->1200|2940->1319
                   LINES: 28->1|31->2|34->1|35->3|35->3|35->3|36->4|37->5|37->5|37->5|38->6|39->7|40->8|40->8|40->8|43->11|43->11|44->12|44->12|45->13|50->18|52->20|52->20|53->21|53->21|55->23|55->23|57->25|59->27|59->27|59->27|63->31
                   -- GENERATED --
               */

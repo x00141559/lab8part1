@@ -1,6 +1,6 @@
-@(customerForm:Form[models.Customer])
+@(customerForm:Form[models.Customer], user: models.users.User)
 @import helper._
-@main("Add Customer") {
+@main("Add Customer",user) {
 <p class="lead">Add or Update a Customer</p>
 @form(action=routes.HomeController.addCustomerSubmit(),'class -> "form horizontal", 'role -> "form"){
     @* CSRF attack prevention *@
