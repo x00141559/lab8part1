@@ -20,18 +20,18 @@
         }
 
         @helper.form(action = controllers.routes.LoginController.loginSubmit()){
-            @* CSRF attack prevention *@
-            @* This token, send by the controller, will be used to authenticate the form submission *@
-            @CSRF.formField
-
-            <div class="form-group">
-                @inputText(loginForm("email"), '_label  -> "",
-                '_class -> "form-control input-xs", 'placeholder -> "Email")
-            </div>
-            <div class="form-group">
-                @inputPassword(loginForm("password"), '_label  -> "",
-                '_class -> "form-control input-xs", 'placeholder -> "Password")
-                </div>
+         @CSRF.formField
+         <div class="form-group">
+            @inputText(loginForm("email"), '_label -> "", 
+            'class -> "form-control input-xs", 'placeholder -> "Email")
+        </div>
+        <div class="form-group">
+            @inputPassword(loginForm("password"), '_label -> "", 
+            'class -> "form-control input-xs", 'placeholder -> "Password")
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Sign In" class="btn btn-primary">
+        </div>
         }
     </div>
 }

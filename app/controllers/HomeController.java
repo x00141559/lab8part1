@@ -77,6 +77,9 @@ public class HomeController extends Controller {
         List<Customer> customerList = Customer.findAll();
         return ok(customer.render(customerList,User.getUserById(session().get("email"))));
     }
+
+    @Security.Authenticated(Secured.class)
+    @With(AuthAdmin.class)
     public Result addProduct(){
         Form<Product> productForm = formFactory.form(Product.class);
         return ok(addProduct.render(productForm,User.getUserById(session().get("email"))));
@@ -137,8 +140,9 @@ else if(newProduct.getId() != null){
 
 
 
-
-
+    @Security.Authenticated(Secured.class)
+    @With(AuthAdmin.class)
+    @Transactional
             public Result deleteProduct(Long id){
                 Product.find.ref(id).delete();
                 flash("success", "Product has been deleted");
